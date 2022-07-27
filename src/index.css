@@ -1,5 +1,6 @@
 *{
   font-family: 'Nunito', sans-serif
+  
 }
 
 body {
@@ -19,3 +20,32 @@ code {
 }
 
 
+form.review-form {
+  border: solid rgb(236, 219, 219) 1px;
+  padding: 1em;
+  width: 40%;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+form.new-poem-form > input,
+form.new-poem-form > textarea {
+  font-size: 1em;
+  font-family: nunito;
+  margin-bottom: 0.5em;
+}
+
+input[type="submit"],
+button {
+  font-weight: bold;
+  font-size: 1em;
+  background: #D2B48C;
+  border: solid black 1px;
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+.form-center {
+  display:flex;
+  justify-content: center;
+}
