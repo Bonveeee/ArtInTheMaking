@@ -72,7 +72,7 @@ You may also see any lint errors in the console.
 ### Figma Link
   This is a preview of the work i will be doing
 * Click this link to view the figma design https://www.figma.com/file/QrzOxZhSb86iJlqrjuc5Rm/ArtInTheMaking
- ![login](https://github.com/Bonveeee/ArtInTheMaking/blob/main/src/images/Screenshot from 2022-07-27 13-29-57.png?raw=true)
+ ![login](https://github.com/Bonveeee/ArtInTheMaking/blob/main/src/images/Screenshot%20from%202022-07-27%2013-29-57.png?raw=true)
 
 ### Technology  Used
 
