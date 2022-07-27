@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom'
 
 function Navbar() {
   return (
+  
     <nav className="navbar">
-            <div className="container-fluid">
+            <div>
                 <ul className="navbar-nav">
                     <li className="nav-item">
                         <Link className="nav-link" to="/">Home</Link>
@@ -24,7 +25,7 @@ function Navbar() {
                 </ul>
             </div>
         </nav>
-  )
+      )
 }
 
 export default Navbar
