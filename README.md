@@ -35,7 +35,7 @@ To use this repo on your machine requires some simple steps
 - Be patient as it creates a copy on your local machine for you.
 - Change directory to the repo folder:
 
-        cd the-Citadel-Library
+        cd artinthemaking
 
 - (Optional) Open it in ``Visual Studio Code``
 
