@@ -47,6 +47,15 @@ margin: auto;
     width: 80%;
   }
 
+.home{
+  display:flex;
+  justify-content: center;
+  
+}
+
+.searcharea{
+   border-radius: 1px solid #D2B48C;
+}
 
 form.review-form {
   border: solid rgb(236, 219, 219) 1px;
@@ -81,4 +90,9 @@ button {
   display:flex;
   justify-content: center;
 }
-
+/* 
+.img{
+  width: 20%;
+  display:flex;
+  justify-content: center;
+} */
