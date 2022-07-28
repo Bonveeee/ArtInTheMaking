@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-
+//this search component will make users search for keywords on the site
 const SEARCH = "https://api.artic.edu/api/v1/artworks/search?"
 
 function Search() {
@@ -31,7 +31,7 @@ function Search() {
   }
 
   useEffect(
-      searchInfo, []
+      searchInfo, [counter]
   )
 
 
