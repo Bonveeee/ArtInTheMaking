@@ -26,7 +26,7 @@ function Search() {
       .then((response) => response.json())
       .then((data) => {
           setSearchItem("")
-          setResults(data.meals == null ? 0 : data.meals.length )
+          setResults(data.data== null ? 0 : data.data.length )
               })
   }
 

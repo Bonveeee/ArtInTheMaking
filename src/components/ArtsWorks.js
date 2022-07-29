@@ -11,28 +11,27 @@ function ArtsWorks() {
     fetch(ARTWRKS_URL)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data.data);
+        console.log(data);
         setArtWorks(data);
       });
   };
 
   useEffect(artworksFetcher, []);
 
-  const image_id = artsWorks.image_id
-  console.log(image_id)
+ // const image_id = artsWorks.image_id
+ // console.log(image_id)
 //const imageUrl = "https://www.artic.edu/iiif/2/{image_id}/full/843,/0/default.jpg"  //Const imageUrl= "/"+config.ii_url +"/"+ image_id + "anything here"
 //https://www.artic.edu/iiif/2/24347d10-6df9-589e-5818-46ddcf18966f/full/843,/0/default.jpg
-const imageUrl= `https://www.artic.edu/iiif/2/${image_id}/full/843,/0/default.jpg`
+//const imageUrl= `https://www.artic.edu/iiif/2/${image_id}/full/843,/0/default.jpg`
 
 const eachArtWorks = artsWorks.data.map((arts)  =>(
-    //   console.log(arts)
-    <div className='card-images' key={artsWorks.id}>
+       <div className='card-images' key={arts.id}>
       <div className='cardsimages'>
-           <img className='img' src={imageUrl} alt ="artImage" />
-        <h2>{artsWorks.date_display}</h2>
-        <h2>{artsWorks.artist_title}</h2>
-        <h2>{artsWorks.medium_display}</h2>
-        <h2>{artsWorks.dimensions}</h2>
+           {/* <img className='img' src={imageUrl} alt ="artImage" /> */}
+        <h2>{arts.date_display}</h2>
+        <h2>{arts.artist_title}</h2>
+        <h2>{arts.medium_display}</h2>
+        <h2>{arts.dimensions}</h2>
       </div>
     </div>
  
