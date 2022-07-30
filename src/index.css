@@ -20,6 +20,7 @@ code {
     monospace;
 }
 
+ /* NavBar Section  */
 .navbar-nav {
   display: flex;
   }
@@ -36,16 +37,26 @@ code {
 
 
 .about-section{
-  border: 1px solid #161602;
+  border-radius: 2px solid #161602;
   width: 95%;
+  padding-top: 5%;
 margin: auto;
+justify-content: center;
   }
 
   .about-section > h1, 
   h2 , p{
     margin-left: 3%;
     width: 80%;
+    display:flex;
+  justify-content: center;
   }
+
+  .about-section  > p {
+    font-size: large;
+  }
+
+/* End of NAvBAr SEct */
 
 .home{
   display:flex;
@@ -79,6 +90,48 @@ margin: auto;
    opacity: 0.6;
    background-color: black ;
 }
+
+/* End of Home SEction */
+
+/* Artist Section  */
+#artist-title{
+  text-align: center;
+  margin-bottom: 2em;
+}
+.grid { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 10px;
+  margin-bottom: 2rem;
+ margin-left: 5rem;
+  
+ 
+  }
+.cards {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.grid > .cards img {
+  max-width: 100%;
+}
+.text {
+  padding: 0 20px 20px;
+}
+.text > button {
+  background:#D2B48C;
+  border: 0;
+  color: black;
+  padding: 10px;
+  width: 100%;
+  }
+
+
+/* End of ARtists SEct */
+
 
 form.review-form {
   border: solid rgb(236, 219, 219) 1px;

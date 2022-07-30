@@ -12,7 +12,7 @@ function ArtsWorks() {
       .then((response) => response.json())
       .then((data) => {
         console.log(data.data);
-        setArtWorks(data);
+        setArtWorks(data.data);
       });
   };
 
@@ -24,23 +24,23 @@ function ArtsWorks() {
 //https://www.artic.edu/iiif/2/24347d10-6df9-589e-5818-46ddcf18966f/full/843,/0/default.jpg
 //const imageUrl= `https://www.artic.edu/iiif/2/${image_id}/full/843,/0/default.jpg`
 
-// const eachArtWorks = artsWorks.data.map((arts)  =>(
-//        <div className='card-images' key={arts.id}>
-//       <div className='cardsimages'>
-//            {/* <img className='img' src={imageUrl} alt ="artImage" /> */}
-//         <h2>{arts.date_display}</h2>
-//         <h2>{arts.artist_title}</h2>
-//         <h2>{arts.medium_display}</h2>
-//         <h2>{arts.dimensions}</h2>
-//       </div>
-//     </div>
+const eachArtWorks = artsWorks.map((arts)  =>(
+       <div className='card-images' key={arts.id}>
+      <div className='cardsimages'>
+           {/* <img className='img' src={imageUrl} alt ="artImage" /> */}
+        <h2>{arts.date_display}</h2>
+        <h2>{arts.artist_title}</h2>
+        <h2>{arts.medium_display}</h2>
+        <h2>{arts.dimensions}</h2>
+      </div>
+    </div>
  
  
-  // ))
+  ))
 
   return (
     <div>
-    {/* {eachArtWorks} */}
+    {eachArtWorks}
     </div>
   )
 }
