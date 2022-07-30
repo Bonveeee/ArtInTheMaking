@@ -103,7 +103,7 @@ justify-content: center;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   grid-gap: 10px;
   margin-bottom: 2rem;
- margin-left: 5rem;
+ margin-left: 7rem;
   
  
   }
