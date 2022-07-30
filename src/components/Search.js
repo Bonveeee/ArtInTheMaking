@@ -25,6 +25,7 @@ function Search() {
       fetch(actualSearch)
       .then((response) => response.json())
       .then((data) => {
+        console.log(data)
           setSearchItem("")
           setResults(data.data== null ? 0 : data.data.length )
               })
@@ -37,14 +38,13 @@ function Search() {
 
 
   return (
-    <div className="container">
+    <div className="search-container">
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label htmlFor="search" className="form-label">SEARCH MEAL</label>
-                    <input type="text" className="form-control" id="search" name="search" value={searchItem} onChange={handleSearch}/>
+                   <input type="text" placeholder="What are you looking for?" className="form-control" id="search" name="search" value={searchItem} onChange={handleSearch}/>
                 </div>
             </form>
-            <h3 className="mt-4">SEARCH RESULTS ({results})</h3>
+            <h3>Available results({results})</h3>
             <div className="row">
                 {/* TODO: POPULATE RESULTS */}
             </div>

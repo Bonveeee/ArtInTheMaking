@@ -1,17 +1,13 @@
 import React from 'react'
-import { Search } from 'react-feather'
+import Search from './Search'
 
 function Home() {
   return (
-    <div className='home'>
-    <h1>Elevate your World With Unique Art and Design</h1>
-    {/* <img className='img'
-        src="https://www.artic.edu/iiif/2/24347d10-6df9-589e-5818-46ddcf18966f/full/843,/0/default.jpg"
-        alt="car"
-      /> */}
-    
-    <Search/>
-    </div>
+ <div className ="container">
+  <img  src="https://bit.ly/3oEfATB" alt="art" style={{width:"100%"}} />
+    <div className="centered"><h1>Elevate your World With Unique Art and Design</h1></div>
+    <div className="search-area"><Search/></div>
+</div>
   )
 }
 
