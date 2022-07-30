@@ -18,15 +18,15 @@ function Artists() {
 
   useEffect(artistFetcher, []);
 
-  const eachArtist = artists.data.map((artist) => (
-    <div className="cards">
-      <div className="artist-card" key={artist.id}>
-        <h3>Name : {artist.title}</h3>
-        <h4>Birth Date: {artist.birth_date}</h4>
-        <h4>Death : {artist.death_date}</h4>
-      </div>
-    </div>
-  ));
+  // const eachArtist = artists.data.map((artist) => (
+  //   <div className="cards">
+  //     <div className="artist-card" key={artist.id}>
+  //       <h3>Name : {artist.title}</h3>
+  //       <h4>Birth Date: {artist.birth_date}</h4>
+  //       <h4>Death : {artist.death_date}</h4>
+  //     </div>
+  //   </div>
+  // ));
 
   // const artistName = artists.data.title
   // console.log(artistName)
@@ -34,7 +34,7 @@ function Artists() {
   return (
     <div>
       {}
-      {eachArtist}
+      {/* {eachArtist} */}
     </div>
   );
 }
