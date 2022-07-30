@@ -132,6 +132,14 @@ justify-content: center;
 
 /* End of ARtists SEct */
 
+.cardsimages{
+  border: 1px solid black;
+  border-radius: 5px ;
+  width: 50%;
+margin-left: 25%;
+margin-top: 5%;
+}
+
 
 form.review-form {
   border: solid rgb(236, 219, 219) 1px;
