@@ -9,12 +9,6 @@ function NewArtForm({ addArt }) {
     dimensions: "",
   });
 
-  // <h2>{arts.title}</h2>
-  // <h2>{arts.artist_title}</h2>
-  // <h2>{arts.medium_display}</h2>
-  // <h2>{arts.date_display}</h2>
-  // <h2>{arts.dimensions}</h2>
-
   function handleSubmit(event) {
     event.preventDefault();
     console.log(newArt);
@@ -37,7 +31,7 @@ function NewArtForm({ addArt }) {
   }
 
   function handleChange(event) {
-    // console.log(event.target.name)
+    console.log(event.target.name);
     setnewArt({ ...newArt, [event.target.name]: event.target.value });
   }
 
@@ -68,8 +62,8 @@ function NewArtForm({ addArt }) {
           onChange={handleChange}
           placeholder="Dimensions"
         />
+        <input id="input2" type="submit" value="Share your Art Details" />
       </form>
-      <input id="input2" type="submit" value="Share your Art Details" />
     </>
   );
 }
