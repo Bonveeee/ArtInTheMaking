@@ -15,6 +15,7 @@ function NewArtForm({ addArt }) {
     fetch(
       "https://api.artic.edu/api/v1/artworks?fields=id,title,date_display,date_display,main_reference_number,dimensions,artist_id,artist_title,artwork_type_title,image_id,medium_display,dimensions,place_of_origin,thumbnail,term_titles",
       {
+        //POSTs input data on the API
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -37,6 +38,7 @@ function NewArtForm({ addArt }) {
 
   return (
     <>
+   {/* returns a form to display for input */}
       <form className="new-art-form" onSubmit={handleSubmit}>
         <input
           id="input"

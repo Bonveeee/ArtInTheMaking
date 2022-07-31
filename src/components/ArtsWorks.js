@@ -10,22 +10,16 @@ function ArtsWorks() {
   // const[imageId , setImageId] = useState([])
 
   const artworksFetcher = () => {
+    //fetches general artworks info 
     fetch(ARTWRKS_URL)
       .then((response) => response.json())
       .then((data) => {
         console.log(data.data);
         setArtWorks(data.data);
-       
       });
   };
 
   useEffect(artworksFetcher, []);
-
-  // const image_id = artsWorks.image_id
-  // console.log(image_id)
-  //const imageUrl = "https://www.artic.edu/iiif/2/{image_id}/full/843,/0/default.jpg"  //Const imageUrl= "/"+config.ii_url +"/"+ image_id + "anything here"
-  //https://www.artic.edu/iiif/2/24347d10-6df9-589e-5818-46ddcf18966f/full/843,/0/default.jpg
-  //let  imageUrl= `https://www.artic.edu/iiif/2/${arts.image_id}/full/843,/0/default.jpg`
 
   function handleClick(event) {
     setForm((form) => !form);
@@ -33,7 +27,6 @@ function ArtsWorks() {
 
   function addArt(newAddedArt) {
     setArtWorks([...artsWorks, newAddedArt]);
-    //console.log("newPoems", newAddedPoem)
   }
 
   const eachArtWorks = artsWorks.map((arts) => (
@@ -51,11 +44,6 @@ function ArtsWorks() {
       </div>
     </div>
   ));
-  //let image_id2 = `"/"+config.ii_url +"/"+ ${imageId }+ "anything here"`
-  //console.log(image_id2)
-  // const image_id = artsWorks.map((arts) => arts.image_id);
-  // console.log(image_id);
-  //let  imageUrl= "`https://www.artic.edu/iiif/2/+"/"+${image_id}+"/full/843,/0/default.jpg`"
 
   return (
     <div>
@@ -69,9 +57,22 @@ function ArtsWorks() {
       <h1 id="input">Are you an Artist? Add your Art?</h1>
       <button onClick={handleClick}>Click To Add</button>
       {form ? <NewArtForm addArt={addArt} /> : null}
-     
     </div>
   );
 }
 
 export default ArtsWorks;
+
+// still to figure out image
+
+// const image_id = artsWorks.image_id
+// console.log(image_id)
+//const imageUrl = "https://www.artic.edu/iiif/2/{image_id}/full/843,/0/default.jpg"  //Const imageUrl= "/"+config.ii_url +"/"+ image_id + "anything here"
+//https://www.artic.edu/iiif/2/24347d10-6df9-589e-5818-46ddcf18966f/full/843,/0/default.jpg
+//let  imageUrl= `https://www.artic.edu/iiif/2/${arts.image_id}/full/843,/0/default.jpg`
+
+//let image_id2 = `"/"+config.ii_url +"/"+ ${imageId }+ "anything here"`
+//console.log(image_id2)
+// const image_id = artsWorks.map((arts) => arts.image_id);
+// console.log(image_id);
+//let  imageUrl= "`https://www.artic.edu/iiif/2/+"/"+${image_id}+"/full/843,/0/default.jpg`"

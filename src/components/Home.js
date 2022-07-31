@@ -12,7 +12,8 @@ function Home() {
 }
 
 export default Home
-//links
+
+//API links for references
 //https://api.artic.edu/api/v1/artworks?fields=id,title,date_display,date_display,main_reference_number,dimensions,artist_id,artist_title,artwork_type_title,image_id,medium_display,dimensions,place_of_origin,thumbnail,term_titles
 //https://api.artic.edu/api/v1/artworks/search?fields=id,title,date_display,date_display,main_reference_number,dimensions,artist_id,artist_title,artwork_type_title,image_id,medium_display,dimensions,place_of_origin,thumbnail,term_titles
 

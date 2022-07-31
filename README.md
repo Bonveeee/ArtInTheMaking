@@ -77,18 +77,18 @@ You may also see any lint errors in the console.
 
 ### Technology  Used
 
-* Figma for Design
-* HTML - which was used to develope the structure off the pages.
-* CSS - which was used to style the User Interface.
 * React JS 
+* HTML - which was used to develope the structure off the pages.
+* Vanilla CSS - which was used to style the User Interface.
+* Figma for Design
 
 [Go Back to the top](#ArtInTheMaking)
 
 ## Known Bugs
-* 
+* image display 
 * 
 ## Future updates
-* 
+* image display
 * 
 ## MIT License
 
