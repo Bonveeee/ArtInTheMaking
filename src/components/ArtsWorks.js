@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
+import NewArtForm from "./NewArtForm";
+
 
 const ARTWRKS_URL =
-  "https://api.artic.edu/api/v1/artworks?fields=id,title,date_display,place_of_origin,dimensions,thumbnail,artist_id,artist_title,artwork_type_title,image_id,term_titles,medium_display,dimensions";
+  "https://api.artic.edu/api/v1/artworks?fields=id,title,date_display,date_display,main_reference_number,dimensions,artist_id,artist_title,artwork_type_title,image_id,medium_display,dimensions,place_of_origin,thumbnail,term_titles";
 
 function ArtsWorks() {
   const [artsWorks, setArtWorks] = useState([]);
@@ -30,10 +32,12 @@ function ArtsWorks() {
     <div className="card-images" key={arts.id}>
       <div className="cardsimages">
       {/* <img  src={arts.thumbnail.lqip} alt="artimage" /> */}
-        <h2>{arts.artist_title}</h2>
-        <h2>{arts.medium_display}</h2>
-        <h2>{arts.date_display}</h2>
-        <h2>{arts.dimensions}</h2>
+      
+        <h2>Title : {arts.title}</h2>
+        <h2>Artist : {arts.artist_title}</h2>
+        <h2>Medium : {arts.medium_display}</h2>
+        <h2>Display Date : {arts.date_display}</h2>
+        <h2>Dimensions : {arts.dimensions}</h2>
         {/* <h3>{arts.image_id}</h3> */}
      
         </div>
@@ -52,7 +56,10 @@ function ArtsWorks() {
          src={imageUrl}
           alt="artImage"
         /> */}
+        <h1 id="art-title">Available Arts</h1>
       {eachArtWorks}
+      <h1  id="input">Are you an Artist? Add your Art?</h1>
+      <NewArtForm/>
     </div>
   );
 }
