@@ -22,6 +22,10 @@ function Artists() {
   function handleClick() {
     alert("See More!");
   }
+ //const image = [1,2,3,4,5,6,7,8,10,11,12]
+ //const numbers = []
+//  let i = 0
+
 
   const eachArtist = artists.map((artist) => (
     <div className="grid">
@@ -32,6 +36,7 @@ function Artists() {
         />
         <div className="text" key={artist.id}>
           <h3>Name : {artist.title}</h3>
+         {/* {image.map((imgs)=> (<h3 key={imgs}>{imgs[imgs]}</h3> ))   }  */}
           <h4>Birth Date: {artist.birth_date}</h4>
           <h4>Death : {artist.death_date}</h4>
           <button onClick={handleClick}>More about the Artist</button>

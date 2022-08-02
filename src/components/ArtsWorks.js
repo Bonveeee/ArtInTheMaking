@@ -7,17 +7,22 @@ const ARTWRKS_URL =
 function ArtsWorks() {
   const [form, setForm] = useState("false");
   const [artsWorks, setArtWorks] = useState([]);
+  const [data, setData] = useState([]);
   // const[imageId , setImageId] = useState([])
 
   const artworksFetcher = () => {
-    //fetches general artworks info 
+    //fetches general artworks info
     fetch(ARTWRKS_URL)
       .then((response) => response.json())
       .then((data) => {
-        console.log(data.data);
+        setData(data);
+        //   console.log(data);
         setArtWorks(data.data);
+        //console.log(data.data)
       });
   };
+  //console.log(artsWorks)
+  console.log(data);
 
   useEffect(artworksFetcher, []);
 
@@ -31,27 +36,33 @@ function ArtsWorks() {
 
   const eachArtWorks = artsWorks.map((arts) => (
     <div className="card-images" key={arts.id}>
+    
       <div className="cardsimages">
-        {/* <img  src={arts.thumbnail.lqip} alt="artimage" /> */}
-
+    <div id="imgdiv">
+    <img
+     id="imgArt"
+          src={
+            data.config.iiif_url +
+            "/" +
+            arts.image_id +
+            "/full/843,/0/default.jpg"
+          }
+          alt={arts.title}
+        />
+    </div>    
         <h2>Title : {arts.title}</h2>
         <h2>Artist : {arts.artist_title}</h2>
         <h2>Medium : {arts.medium_display}</h2>
         <h2>Display Date : {arts.date_display}</h2>
         <h2>Dimensions : {arts.dimensions}</h2>
-
-        {/* <h3>{arts.image_id}</h3> */}
-      </div>
+        {/* <h2> Url:{data.config.iiif_url + "/" +arts.image_id + "/full/843,/0/default.jpg"}</h2> */}
+        {/* getting image through linking configurl and image id from API as per API docs */}
+             </div>
     </div>
   ));
 
   return (
     <div>
-      {/* <img
-          className="img"
-         src={imageUrl}
-          alt="artImage"
-        /> */}
       <h1 id="art-title">Available Arts</h1>
       {eachArtWorks}
       <h1 id="input">Are you an Artist? Add your Art?</h1>
@@ -62,17 +73,3 @@ function ArtsWorks() {
 }
 
 export default ArtsWorks;
-
-// still to figure out image
-
-// const image_id = artsWorks.image_id
-// console.log(image_id)
-//const imageUrl = "https://www.artic.edu/iiif/2/{image_id}/full/843,/0/default.jpg"  //Const imageUrl= "/"+config.ii_url +"/"+ image_id + "anything here"
-//https://www.artic.edu/iiif/2/24347d10-6df9-589e-5818-46ddcf18966f/full/843,/0/default.jpg
-//let  imageUrl= `https://www.artic.edu/iiif/2/${arts.image_id}/full/843,/0/default.jpg`
-
-//let image_id2 = `"/"+config.ii_url +"/"+ ${imageId }+ "anything here"`
-//console.log(image_id2)
-// const image_id = artsWorks.map((arts) => arts.image_id);
-// console.log(image_id);
-//let  imageUrl= "`https://www.artic.edu/iiif/2/+"/"+${image_id}+"/full/843,/0/default.jpg`"

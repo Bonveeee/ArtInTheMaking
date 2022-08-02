@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 function NewArtForm({ addArt }) {
   const [newArt, setnewArt] = useState({
+    image : "",
     title: "",
     artist: "",
     medium_display: "",
@@ -19,6 +20,7 @@ function NewArtForm({ addArt }) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
+          image : newArt.image,
           title: newArt.title,
           artist: newArt.artist_title,
           medium_display: newArt.medium_display,
@@ -38,8 +40,16 @@ function NewArtForm({ addArt }) {
 
   return (
     <>
-   {/* returns a form to display for input */}
+      {/* returns a form to display for input */}
       <form className="new-art-form" onSubmit={handleSubmit}>
+        <input
+          id="input"
+          type="file"
+          name="image"
+          onChange={handleChange}
+          placeholder="Add your Art"
+        />
+
         <input
           id="input"
           name="title"
